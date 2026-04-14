@@ -35,7 +35,7 @@ const brandLogos = [
 function getServiceImage(key: string): string {
   // ✅ Map دقيق جدًا بالمفاتيح بالظبط كما هي في ملف الترجمة
   const serviceImageMap: Record<string, string> = {
-    'service-washing': '/images/Washing_machine.png',
+    'service-washing': '/images/washing_machine.png',
     'service-dishwasher': '/images/dishwasher.png',
     'service-refrigerator': '/images/refrigerator.png',
     'service-microwave': '/images/microwave.png',
@@ -44,7 +44,7 @@ function getServiceImage(key: string): string {
     'service-hoods': '/images/extractor_fan.png',
     
     // نسخ احتياطية بأسماء مختلفة لو اتغيرت المفاتيح مستقبلاً
-    'washingMachine': '/images/Washing_machine.png',
+    'washingMachine': '/images/washing_machine.png',
     'dishwasher': '/images/dishwasher.png',
     'refrigerator': '/images/refrigerator.png',
     'microwave': '/images/microwave.png',
