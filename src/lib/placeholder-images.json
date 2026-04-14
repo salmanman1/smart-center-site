@@ -1,0 +1,100 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Premium modern kitchen with high-end appliances",
+      "imageUrl": "https://picsum.photos/seed/smart-kitchen-hero/1920/1080",
+      "imageHint": "luxury kitchen appliances"
+    },
+    {
+      "id": "company-logo",
+      "description": "Smart Center Logo",
+      "imageUrl": "https://picsum.photos/seed/smart-logo-red/200/200",
+      "imageHint": "modern circular logo"
+    },
+    {
+      "id": "favicon",
+      "description": "Smart Center Favicon",
+      "imageUrl": "https://picsum.photos/seed/smart-logo-red/32/32",
+      "imageHint": "small logo icon"
+    },
+    {
+      "id": "service-dishwasher",
+      "description": "Dishwasher repair",
+      "imageUrl": "https://picsum.photos/seed/dishwasher/600/400",
+      "imageHint": "dishwasher machine"
+    },
+    {
+      "id": "service-refrigerator",
+      "description": "Refrigerator maintenance",
+      "imageUrl": "https://picsum.photos/seed/fridge/600/400",
+      "imageHint": "modern refrigerator"
+    },
+    {
+      "id": "service-washing",
+      "description": "Washing machine repair",
+      "imageUrl": "https://picsum.photos/seed/washing-machine/600/400",
+      "imageHint": "washing machine laundry"
+    },
+    {
+      "id": "service-cooker",
+      "description": "Cooker and oven repair",
+      "imageUrl": "https://picsum.photos/seed/cooker/600/400",
+      "imageHint": "built-in oven gas stove"
+    },
+    {
+      "id": "service-ac",
+      "description": "Air conditioner service",
+      "imageUrl": "https://picsum.photos/seed/air-conditioner/600/400",
+      "imageHint": "split air conditioner"
+    },
+    {
+      "id": "service-microwave",
+      "description": "Microwave repair",
+      "imageUrl": "https://picsum.photos/seed/microwave/600/400",
+      "imageHint": "kitchen microwave oven"
+    },
+    {
+      "id": "service-hoods",
+      "description": "Kitchen hoods repair",
+      "imageUrl": "https://picsum.photos/seed/hood/600/400",
+      "imageHint": "kitchen hood vent"
+    },
+    {
+      "id": "brand-franke",
+      "description": "Franke Brand Logo",
+      "imageUrl": "https://picsum.photos/seed/franke-logo/300/150",
+      "imageHint": "franke logo"
+    },
+    {
+      "id": "brand-zanussi",
+      "description": "Zanussi Brand Logo",
+      "imageUrl": "https://picsum.photos/seed/zanussi-logo/300/150",
+      "imageHint": "zanussi logo"
+    },
+    {
+      "id": "brand-lg",
+      "description": "LG Brand Logo",
+      "imageUrl": "https://picsum.photos/seed/lg-logo/300/150",
+      "imageHint": "lg logo"
+    },
+    {
+      "id": "brand-ariston",
+      "description": "Ariston Brand Logo",
+      "imageUrl": "https://picsum.photos/seed/ariston-logo/300/150",
+      "imageHint": "ariston logo"
+    },
+    {
+      "id": "brand-hansa",
+      "description": "Hansa Brand Logo",
+      "imageUrl": "https://picsum.photos/seed/hansa-logo/300/150",
+      "imageHint": "hansa logo"
+    },
+    {
+      "id": "brand-samsung",
+      "description": "Samsung Brand Logo",
+      "imageUrl": "https://picsum.photos/seed/samsung-logo/300/150",
+      "imageHint": "samsung logo"
+    }
+  ]
+}
