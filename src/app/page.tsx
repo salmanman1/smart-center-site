@@ -24,26 +24,22 @@ const brandLogos = [
   { id: 'brand-zanussi',  name: 'Zanussi',  imageUrl: '/images/logos/zanussi.png'  },
   { id: 'brand-lg',       name: 'LG',       imageUrl: '/images/logos/lglg.png'       },
   { id: 'brand-ariston',  name: 'Ariston',  imageUrl: '/images/logos/ariston.png'  },
-  { id: 'brand-hansa',    name: 'Hansa',    imageUrl: '/images/logos/hansa.png'    },
+  // ✅ تم تعديل الاسم هنا ليطابق ملف Hansa.png (حرف H كبير)
+  { id: 'brand-hansa',    name: 'Hansa',    imageUrl: '/images/logos/Hansa.png'    },
   { id: 'brand-samsung',  name: 'Samsung',  imageUrl: '/images/logos/samsung.png'  },
 ];
 
 // ─── Service Image Resolver (Fuzzy Match) ─────────────────────────────────────
-// يشتغل بغض النظر عن أسماء المفاتيح في ملف الترجمة — بيبحث جوه الكلمة مش بيطابقها حرفياً
-// ─── Service Image Resolver (Fixed Order) ─────────────────────────────────────
-// ─── Service Image Resolver (Exact Match) ─────────────────────────────────────
 function getServiceImage(key: string): string {
-  // ✅ Map دقيق جدًا بالمفاتيح بالظبط كما هي في ملف الترجمة
   const serviceImageMap: Record<string, string> = {
     'service-washing': '/images/washing_machine.png',
     'service-dishwasher': '/images/dishwasher.png',
     'service-refrigerator': '/images/refrigerator.png',
     'service-microwave': '/images/microwave.png',
-    'service-cooker': '/images/stove.png',        // ✅ بوتاجاز - الصورة الصح
+    'service-cooker': '/images/stove.png',
     'service-ac': '/images/air_conditioner.png',
     'service-hoods': '/images/extractor_fan.png',
     
-    // نسخ احتياطية بأسماء مختلفة لو اتغيرت المفاتيح مستقبلاً
     'washingMachine': '/images/washing_machine.png',
     'dishwasher': '/images/dishwasher.png',
     'refrigerator': '/images/refrigerator.png',
@@ -57,12 +53,10 @@ function getServiceImage(key: string): string {
 
   const k = key.toLowerCase();
   
-  // ✅ أولًا: يدور على المفتاح بالظبط
   if (serviceImageMap[k]) {
     return serviceImageMap[k];
   }
 
-  // ✅ ثانيًا: لو مش لاقيه، يدور على كلمة داخل المفتاح
   if (k.includes('wash') || k.includes('laundry'))
     return '/images/washing_machine.png';
   if (k.includes('dish'))
@@ -72,13 +66,12 @@ function getServiceImage(key: string): string {
   if (k.includes('micro') || k.includes('wave'))
     return '/images/microwave.png';
   if (k.includes('cook') || k.includes('stove') || k.includes('oven') || k.includes('بوتاجاز'))
-    return '/images/stove.png';      // ✅ البوتاجاز هيرجع صورته الصح
+    return '/images/stove.png';
   if (k.includes('ac') || k.includes('air') || k.includes('condition'))
     return '/images/air_conditioner.png';
   if (k.includes('hood') || k.includes('extract') || k.includes('fan'))
     return '/images/extractor_fan.png';
 
-  // Fallback - لو خدمة جديدة اتضافت
   return '/images/Front_panel.png';
 }
 
@@ -159,13 +152,13 @@ export default function Home() {
               {/* Logo above hero title */}
               <div className="flex justify-center mb-4">
                 <Image
-  src="/images/Logo.png"
-  alt="Smart Center Logo"
-  width={200}
-  height={60}
-  className="object-contain"
-  priority
-/>
+                  src="/images/Logo.png"
+                  alt="Smart Center Logo"
+                  width={200}
+                  height={60}
+                  className="object-contain"
+                  priority
+                />
               </div>
 
               <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-md border border-primary/30 px-4 md:px-6 py-1.5 md:py-2.5 rounded-full mb-2 mx-auto">
@@ -183,8 +176,8 @@ export default function Home() {
                   <span className="inline-block whitespace-nowrap">{t.hero.titlePre}</span>
                 )}
                 <span className="gold-text-gradient italic px-4 md:px-8 inline-block drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] whitespace-nowrap">
-  {t.common.brandName}
-</span>
+                  {t.common.brandName}
+                </span>
                 <span className="inline-block whitespace-nowrap">{t.hero.titlePost}</span>
               </h1>
 
@@ -228,11 +221,11 @@ export default function Home() {
 
           <div className="relative flex overflow-hidden group">
             <div className="animate-marquee flex gap-12 md:gap-32 items-center py-6 md:py-10">
-              {/* Duplicate the list for a seamless infinite marquee */}
               {[...brandLogos, ...brandLogos].map((brand, idx) => (
                 <div
                   key={`${brand.id}-${idx}`}
-                  className="relative h-14 w-36 md:h-24 md:w-56 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700 flex items-center justify-center filter invert brightness-200"
+                  // ✅ تم إزالة filter invert و brightness لضمان ظهور الألوان الأصلية
+                  className="relative h-14 w-36 md:h-24 md:w-56 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700 flex items-center justify-center"
                 >
                   <Image src={brand.imageUrl} alt={brand.name} fill className="object-contain" />
                 </div>
