@@ -64,7 +64,7 @@ function getServiceImage(key: string): string {
 
   // ✅ ثانيًا: لو مش لاقيه، يدور على كلمة داخل المفتاح
   if (k.includes('wash') || k.includes('laundry'))
-    return '/images/Washing_machine.png';
+    return '/images/washing_machine.png';
   if (k.includes('dish'))
     return '/images/dishwasher.png';
   if (k.includes('refrig') || k.includes('fridge'))
