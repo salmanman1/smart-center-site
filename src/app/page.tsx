@@ -36,7 +36,7 @@ function getServiceImage(key: string): string {
     'service-dishwasher': '/images/dishwasher.png',
     'service-refrigerator': '/images/refrigerator.png',
     'service-microwave': '/images/microwave.png',
-    'service-cooker': '/images/stove.png',
+    'service-cooker': '/images/front_panel.png',        // ✅ تم التغيير: بوتاجاز -> بانل
     'service-ac': '/images/air_conditioner.png',
     'service-hoods': '/images/extractor_fan.png',
     
@@ -44,9 +44,9 @@ function getServiceImage(key: string): string {
     'dishwasher': '/images/dishwasher.png',
     'refrigerator': '/images/refrigerator.png',
     'microwave': '/images/microwave.png',
-    'cooker': '/images/stove.png',
-    'stove': '/images/stove.png',
-    'oven': '/images/stove.png',
+    'cooker': '/images/front_panel.png',                // ✅ تم التغيير
+    'stove': '/images/front_panel.png',                 // ✅ تم التغيير
+    'oven': '/images/front_panel.png',                  // ✅ تم التغيير
     'airConditioner': '/images/air_conditioner.png',
     'hoods': '/images/extractor_fan.png',
   };
@@ -66,13 +66,13 @@ function getServiceImage(key: string): string {
   if (k.includes('micro') || k.includes('wave'))
     return '/images/microwave.png';
   if (k.includes('cook') || k.includes('stove') || k.includes('oven') || k.includes('بوتاجاز'))
-    return '/images/stove.png';
+    return '/images/front_panel.png';      // ✅ تم التغيير: أي كلمة تدل على بوتاجاز ترجع صورة البانل
   if (k.includes('ac') || k.includes('air') || k.includes('condition'))
     return '/images/air_conditioner.png';
   if (k.includes('hood') || k.includes('extract') || k.includes('fan'))
     return '/images/extractor_fan.png';
 
-  return '/images/Front_panel.png';
+  return '/images/front_panel.png';  // ✅Fallback أيضاً يعود صورة البانل
 }
 
 export default function Home() {
